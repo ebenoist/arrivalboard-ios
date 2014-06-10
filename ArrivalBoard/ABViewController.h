@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "ArrivalClient.h"
+#import "ETA.h"
 
-@interface ABViewController : UIViewController
 
+@interface ABViewController : UITableViewController<CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic,strong) NSMutableArray *etas;
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 @end
