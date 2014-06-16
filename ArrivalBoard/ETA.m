@@ -15,6 +15,7 @@
   
   return self;
 }
+
 -(void)setArrivalTimeWithString:(NSString *)time
 {
   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
